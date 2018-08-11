@@ -13,21 +13,7 @@
 	2. to hide modal:
 		$.hideModal();
 	
-	3. to update the content of a modal:
-		$.updateModal([new html content],[new class]);
-		   - new class is optional, if not specified, the class will remain the same and just the content will be updated...
-		   	
-	4. to re-center the modal:
-		$.modalResize();
-			-Most likely won't be called by outside code, is is mainly used inside this function, and its use is to keep the modal 
-			 centered when the window is resized or the modal itself is resized (through $.updateModal()), but if you have a need 
-			 to re-center the modal for some reason, this will do it.
-			 
-			 background: "url('PATH-TO-IMG') 8px 8px no-repeat, linear-gradient(@startColor, @endColor)"; // Standard, IE10
-			 
-	
-	*/
-	
+*/	
 var XconfigX = {}; //global configuration object defined
 
 var mainColor = 'DarkGray';
