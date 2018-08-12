@@ -79,9 +79,9 @@ jQuery.extend({
 				 
 		 if(XconfigX.content === null) { return; } //modal content must be passed
 		 
-		 var $body = $("body"); //cache the 'body' element
+		 var $body = $("body"); 
 		 
-		 XconfigX.modalIndex = XconfigX.screenDimmerIndex + 500; // 'z-index' property of the modal, just has to be greater than that of the dimmer
+		 XconfigX.modalIndex = XconfigX.screenDimmerIndex + 500; 
 		 
 		 var modfunc = function() {
 			 
@@ -131,7 +131,7 @@ jQuery.extend({
 				
 			}
 			
-			if(!XconfigX.noClose) { //if we are allowing 'escape' to kill the modal window and showing a 'close' link in the box
+			if(!XconfigX.noClose) { //if allowing 'escape' to kill the modal window and showing a 'close' link in the box
 			
 				var $thisModalID = XconfigX.theModalID;
 				
@@ -273,28 +273,12 @@ jQuery.extend({
             updateModalID: XconfigX.theModalID
 			,newClass: XconfigX.modalClass
 			,newContent: null
-			//,thisNoClose:XconfigX.noClose
 			 
 		 };
 		  
 		 if (settings){$.extend(updateConfig, settings);}
 		 
-		 //var $updateModal = $("#" + updateConfig.updateModalID);
-		 
 		 $("#" + updateConfig.updateModalID).html(updateConfig.newContent).attr({"class":updateConfig.newClass}).addClass(XconfigX.allModalClass);
-		 //$("#" + updateConfig.updateModalID).html(updateConfig.newContent).addClass(updateConfig.newClass);
-		 
-		/*if(!XconfigX.noClose) {
-			 
-			 $theModal.append(XconfigX.closeButton);
-			 
-			 $(XconfigX.closeButton).on("click",function() {
-				 
-				 $.hideModal();
-				 
-			 });
-			 
-		 }*/
 		 
 		 $.modalResize();
 		 
