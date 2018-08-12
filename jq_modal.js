@@ -8,10 +8,16 @@
 	/*
 	
 	1. to invoke modal:
-		$.showModal({content:"<html content here>"})
+		$.showModal({content:"<html content here>"});
 	
 	2. to hide modal:
-		$.hideModal();
+		$.hideModal(); // modal ID required if there is more than one modal present
+		
+	3. to update modal content:
+		$.updateModal({updateModalID: 'yourModalID'});
+		
+	4. Remove any and all Modals:
+		$.killAllModals();
 	
 */	
 var XconfigX = {}; //global configuration object defined
@@ -68,7 +74,7 @@ jQuery.extend({
 			,screenDimmerID: 'XscreenDimmerX' // create your own screenDimmer ID if you wish
 			,screenDimmerOpacity: '.70' // how translucent you want the dimmer to be
 			,screenDimmerColor: 'black' // what color you want the dimmer to be
-			,fadeSpeed: 150
+			,fadeSpeed: 150 // how fast the modal fades in and out (milliseconds)
 			,topPosition: 3 // divisor of screen height to get the top position of the modal. example: 3 would be screenHeight/3. so the top of the modal would be a 3rd of the way down the screen. Increase this number to make the modal appear higher on the screen, decrease to move lower
 			,draggable: 1 // 1 = make this modal draggable, 0 = it is not draggable
 			,fullScreen: 0
